@@ -1,3 +1,3 @@
 Breadth First Search:
 
-[Capture](Interface.jpg)
+![Capture](Interface.jpg)
