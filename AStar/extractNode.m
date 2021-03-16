@@ -1,5 +1,5 @@
-function opened_list = extractNode(opened_list, idx)
+function list = extractNode(list, idx)
 
-    opened_list = [opened_list(1:idx-1) opened_list(idx+1:end)];
+    list = [list(1:idx-1) list(idx+1:end)];
 
 end
