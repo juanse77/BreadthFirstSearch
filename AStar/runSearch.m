@@ -15,6 +15,9 @@ function [closed_list, target_flag] = runSearch(start, target, closed_list, x_li
                 return;
             end
             
+            closed_list(end+1) = node;
+            opened_list = opened_list(2:end);
+            
         else
            return
         end
@@ -58,9 +61,6 @@ function [closed_list, target_flag] = runSearch(start, target, closed_list, x_li
             end
             
         end
-
-        closed_list(end+1) = node;
-        opened_list = opened_list(2:end);
     
     end
     

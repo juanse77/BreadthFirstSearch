@@ -1,11 +1,17 @@
-function idx = findByCost(opened_list, fn)
+function idx = findByCost(list, fn)
 
     idx = 1;
-    aux_node = opened_list(idx);
     
-    while idx < length(opened_list) && fn > aux_node.fn
-       idx = idx + 1;
-       aux_node = opened_list(idx); 
+    while idx < length(list)
+        
+        aux_node = list(idx);
+       
+        if fn < aux_node.fn
+           break;
+        end
+        
+        idx = idx + 1;
+        
     end
     
 end
