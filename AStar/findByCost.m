@@ -2,7 +2,7 @@ function idx = findByCost(list, fn)
 
     idx = 1;
     
-    while idx < length(list)
+    while idx < length(list)+1
         
         aux_node = list(idx);
        
