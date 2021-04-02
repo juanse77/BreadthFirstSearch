@@ -10,10 +10,10 @@ grid = grid';
 occupied_cells = drawMap(grid, x_lim, y_lim);
 closed_list = occupied_cells;
 
-start_cell = fixCell(occupied_cells, x_lim, y_lim, "yellow");
+start_cell = fixCell(occupied_cells, x_lim, y_lim, "yellow", false, 2, 2);
 occupied_cells(end+1) = start_cell;
 
-target_cell = fixCell(occupied_cells, x_lim, y_lim, "green");
+target_cell = fixCell(occupied_cells, x_lim, y_lim, "green", false, 29, 16);
 
 pause(0.5);
 
@@ -23,5 +23,5 @@ if target_flag
     path = calculatePath(closed_list, start_cell);
     drawPath(path);
 else
-    fprintf("Route not finded\n");
+    fprintf("Route not found\n");
 end
