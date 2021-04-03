@@ -1,4 +1,10 @@
 function [count, target_flag] = countStepsFromCorner2Corner(grid, n)
+% La función countStepsFromCorner2Corner lleva a cabo la planificación de 
+% ruta de un agente desde una de las esquinas del "mundo" descrito por el
+% parámetro grid hasta la esquina opuesta.
+% La función devuelve el número de celdas que ha necesitado visitar hasta
+% llegar al destino y si realmente ha llegado.
+
     grid = grid';
     
     [x_lim, y_lim] = drawGrid(grid, false);

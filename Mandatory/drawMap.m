@@ -1,5 +1,9 @@
 function [occupied_cells] = drawMap(grid, xlim, ylim, to_graph)
-    
+% La función drawMap devuelve la lista de celdas de la rejilla que continen
+% obstáculos.
+% El parámetro to_graph permite visualizar en el plot los obstáculos que 
+% contiene el "mundo".
+
     if nargin < 4
         to_graph = true;
     end

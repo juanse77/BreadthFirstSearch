@@ -1,5 +1,10 @@
 function [x_lim, y_lim] = drawGrid(grid, to_graph)
-    
+% La función drawGrid devuelve los índices de la última fila y última
+% columna del grid, que contiene la discretización del "mundo" en el que se
+% encuentra el robot.
+% El parámetro to_graph permite crear el plot en el que se visualizará el
+% "mundo" en el que se mueve el robot
+
     if nargin < 2
         to_graph = true;
     end

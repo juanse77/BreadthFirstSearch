@@ -1,4 +1,10 @@
 function [closed_list, target_flag] = runSearch(start, target, closed_list, x_lim, y_lim)
+% La función runSearch implementa la búsqueda de ruta utilizando el
+% algoritmo de búsqueda en anchura o Breadth-first search (BFS), partiendo
+% de la posición start para llegar a la celda target.
+% La función devulve actualizada la lista de celdas visitadas, closed_list,
+% que incluye los obstáculos actualizada. También devuelve una vaiable
+% booleana que indica si ha sido capaz de llegar al destino (target).
 
     opened_list = [start];
     target_flag = false;
