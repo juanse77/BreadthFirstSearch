@@ -1,25 +1,31 @@
-function [x_lim, y_lim] = drawGrid(grid)
-
+function [x_lim, y_lim] = drawGrid(grid, to_graph)
+    
+    if nargin < 2
+        to_graph = true;
+    end
+    
     [nx, ny] = size(grid);
 
     x_lim = nx-1;
     y_lim = ny-1;
 
-    x = linspace(0, x_lim, nx);
-    y = linspace(0, y_lim, nx);
+    if to_graph
+        x = linspace(0, x_lim, nx);
+        y = linspace(0, y_lim, nx);
 
-    [X, Y] = meshgrid(x, y);
+        [X, Y] = meshgrid(x, y);
 
-    MAX_X = max(x);
-    MAX_Y = max(y);
+        MAX_X = max(x);
+        MAX_Y = max(y);
 
-    figure;
-    plot(X, Y, Y, X, "color", "blue");
+        figure;
+        plot(X, Y, Y, X, "color", "blue");
 
-    xlim = [0, MAX_X];
-    ylim = [0, MAX_Y];
+        xlim = [0, MAX_X];
+        ylim = [0, MAX_Y];
 
-    hold on;
-    axis equal;
-
+        hold on;
+        axis equal;
+    end
+    
 end

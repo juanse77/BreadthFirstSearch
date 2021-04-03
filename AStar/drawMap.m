@@ -1,5 +1,9 @@
-function [occupied_cells] = drawMap(grid, xlim, ylim)
-
+function [occupied_cells] = drawMap(grid, xlim, ylim, to_graph)
+    
+    if nargin < 4
+        to_graph = true;
+    end
+    
     [x, y] = find(grid);
     
     x = x - 1;
@@ -16,7 +20,7 @@ function [occupied_cells] = drawMap(grid, xlim, ylim)
         occupied_cells(i).h = -1;
         occupied_cells(i).fn = Inf;        
         
-        if x(i) < xlim && y(i) < ylim
+        if to_graph && x(i) < xlim && y(i) < ylim
             
             vert_x = [x(i), x(i)+1, x(i)+1, x(i)];
             vert_y = [y(i), y(i), y(i)+1, y(i)+1];
