@@ -6,7 +6,11 @@
 clc;
 clear;
 
-load("map.mat");
+init_cell = [2, 2];
+target_cell = [29, 16];
+grid_file = "map.mat";
+
+load(grid_file);
 
 grid = grid';
 
@@ -15,10 +19,10 @@ grid = grid';
 occupied_cells = drawMap(grid, x_lim, y_lim);
 closed_list = occupied_cells;
 
-start_cell = fixCell(occupied_cells, x_lim, y_lim, "yellow", true, false, 2, 2);
+start_cell = fixCell(occupied_cells, x_lim, y_lim, "yellow", true, false, init_cell(1), init_cell(2));
 occupied_cells(end+1) = start_cell;
 
-target_cell = fixCell(occupied_cells, x_lim, y_lim, "green", true, false, 29, 16);
+target_cell = fixCell(occupied_cells, x_lim, y_lim, "green", true, false, target_cell(1), target_cell(2));
 
 pause(0.5);
 
