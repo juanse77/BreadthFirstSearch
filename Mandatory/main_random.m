@@ -10,10 +10,10 @@ grid = grid';
 occupied_cells = drawMap(grid, x_lim, y_lim);
 closed_list = occupied_cells;
 
-start_cell = fixCell(occupied_cells, x_lim, y_lim, "yellow", true);
+start_cell = fixCell(occupied_cells, x_lim, y_lim, "yellow", true, true);
 occupied_cells(end+1) = start_cell;
 
-target_cell = fixCell(occupied_cells, x_lim, y_lim, "green", true);
+target_cell = fixCell(occupied_cells, x_lim, y_lim, "green", true, true);
 
 pause(0.5);
 

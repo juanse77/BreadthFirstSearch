@@ -1,4 +1,4 @@
-function [occupied_cell] = fixCell(occupied_cells, x_lim, y_lim, color, random_cell, x, y)
+function [occupied_cell] = fixCell(occupied_cells, x_lim, y_lim, color, to_graph, random_cell, x, y)
 
     if random_cell
         
@@ -18,11 +18,14 @@ function [occupied_cell] = fixCell(occupied_cells, x_lim, y_lim, color, random_c
         point(1) = x;
         point(2) = y;
     end
-    vert_x = [point(1), point(1)+1, point(1)+1, point(1)];
-    vert_y = [point(2), point(2), point(2)+1, point(2)+1];
     
-    patch(vert_x, vert_y, color);
+    if to_graph
+        vert_x = [point(1), point(1)+1, point(1)+1, point(1)];
+        vert_y = [point(2), point(2), point(2)+1, point(2)+1];
 
+        patch(vert_x, vert_y, color);
+    end
+    
     occupied_cell = getNode(point(1), point(2), -1, -1, -1);
     
 end
