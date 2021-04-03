@@ -3,7 +3,7 @@
 % fin de analizar cómo varía el rendimiento del algoritmo de búsqueda
 % en anchura o Breadth-first search (BFS).
 % Las rejillas empleadas para discretizar el "mundo" tienen tamaños que van
-% desde 15x15 hasta 5x5, utilizando simpre rejillas cuadradas.
+% desde 15x15 hasta 55x55, utilizando simpre rejillas cuadradas.
 % Para analizar el rendimiento, se utiliza como métrica el número de saltos
 % empleados en la búsqueda de la ruta.
 
