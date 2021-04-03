@@ -1,4 +1,6 @@
 function drawPath(path)
+% La función drawPath añade al plot la ruta encontrada por el algoritmo de
+% búsqueda
 
     for i = length(path):-1:1
         vert_x = [path(i).x, path(i).x+1, path(i).x+1, path(i).x];

@@ -1,3 +1,8 @@
+% Este script ejecuta la planificación de ruta de un agente situado en el
+% "mundo" descrito en el archivo "map.mat" a partir de un punto de inicio y
+% un punto final, especificados por el usuario a través de la función
+% fixCell.
+
 clc;
 clear;
 

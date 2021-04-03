@@ -1,4 +1,7 @@
 function idx = findByCost(list, fn)
+% La función findByCost el índice del primer nodo de la lista list cuyo
+% coste es mayor o igual que fn, con el fin de poder insertar los nodos de
+% forma ordenada de menor a mayor coste
 
     idx = 1;
     

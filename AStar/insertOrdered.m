@@ -1,4 +1,6 @@
 function opened_list = insertOrdered(opened_list, node)
+% La función insertOrdered inserta el nodo node en la lista opened_list
+% manteniendo el orden de menor a mayor coste
 
     idx = findByCost(opened_list, node.fn);
     
